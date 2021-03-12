@@ -1,0 +1,39 @@
+{
+  "name": "impressive-studio-mobileapp-viewer",
+  "main": "app.js",
+  "displayName": "Impressvie Studio Viewer",
+  "version": "7.0.1",
+  "description": "Impressive Studio Viewer",
+  "homepage": "https://impressive.studio",
+  "repository": "https://github.com/impressive-studio/mobileapp-viewer.git",
+  "keywords": [
+    "impressive.studio",
+    "impressive",
+    "mobile"
+  ],
+  "license": "SEE LICENSE IN 'LICENSE'",
+  "dependencies": {
+    "@nativescript/core": "~7.0.0",
+    "@nativescript/theme": "~2.3.3",
+    "@nstudio/nativescript-checkbox": "^2.0.4",
+    "@nstudio/nativescript-floatingactionbutton": "^3.0.4",
+    "nativescript-ar": "^1.1.0",
+    "nativescript-carousel": "^7.0.1",
+    "nativescript-drop-down": "^5.0.6",
+    "nativescript-ui-dataform": "^7.0.4",
+    "nativescript-ui-sidedrawer": "^9.0.3",
+    "nativescript-vue": "2.8.0"
+  },
+  "devDependencies": {
+    "@babel/core": "~7.1.0",
+    "@babel/preset-env": "~7.1.0",
+    "@nativescript/android": "7.0.1",
+    "@nativescript/webpack": "^3.0.3",
+    "babel-loader": "~8.0.0",
+    "nativescript-vue-template-compiler": "2.8.0",
+    "node-sass": "^4.7.1",
+    "tns-ios": "6.5.2",
+    "vue-loader": "15.9.3"
+  },
+  "readme": "Impressive Studio Viewer"
+}
