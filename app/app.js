@@ -2,6 +2,7 @@ import Vue from "nativescript-vue";
 import App from "./components/App";
 import Home from "./components/Home";
 import DrawerContent from "./components/menu/DrawerContent";
+var firebase = require("@nativescript/firebase");
 
 Vue.config.silent = false;
 Vue.registerElement("AR", () => require("nativescript-ar").AR);
@@ -20,6 +21,19 @@ Vue.registerElement(
         }
     }
 );
+// init firebase
+firebase.firebase.init({
+    onAuthStateChanged: function (data) { // optional but useful to immediately re-logon the user when they re-visit your app
+        console.log(data.loggedIn ? "Logged in to firebase" : "Logged out from firebase");
+        if (data.loggedIn) {
+            console.log("user's email address: " + (data.user.email ? data.user.email : "N/A"));
+        }
+    }
+}).then(data => {
+    console.log('firebase.init done')
+}).catch(err => {
+    console.log("firebase.init error");
+});
 
 new Vue({
     render(h) {

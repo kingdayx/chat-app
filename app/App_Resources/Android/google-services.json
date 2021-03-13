@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "344387256591",
+    "firebase_url": "https://my-application-711ee.firebaseio.com",
+    "project_id": "my-application-711ee",
+    "storage_bucket": "my-application-711ee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:344387256591:android:33bac7d25cb767d961be7a",
+        "android_client_info": {
+          "package_name": "studio.impressive.mobileapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "344387256591-1cdp3cp3vis5cofj1rimu1rpthkpvr40.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUED9lAsvF9gaFgyjaTYQotTBlNTacJcQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "344387256591-1cdp3cp3vis5cofj1rimu1rpthkpvr40.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
