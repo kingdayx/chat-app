@@ -37,38 +37,57 @@
 </template>
 <script>
 import SignUp from "./SignUp";
-import Confirmation from "./Confirmation"
+import Confirmation from "./Confirmation";
+var firebase = require("@nativescript/firebase");
 export default {
-  components: [SignUp,Confirmation],
+  components: [SignUp, Confirmation],
   data() {
     return {
       items: [],
       signUp: SignUp,
-      Confirmation:Confirmation,
-      enabled: false,
+      Confirmation: Confirmation,
+      enabled: true
     };
   },
-  mounted() {
-    
-  },
+  mounted() {},
   methods: {
     onTapSignIn() {
-      this.$showModal(Confirmation, {
-        fullscreen: true,
-        animated: true,
-        clearhistory: true,
-      });
+      // this.$showModal(Confirmation, {
+      //   fullscreen: true,
+      //   animated: true,
+      //   clearhistory: true,
+      // });
       console.log("you click signin button");
+      firebase.firebase
+        .login({
+          type: firebase.firebase.LoginType.PHONE,
+          phoneOptions: {
+            phoneNumber: "+923457941246",
+            verificationPrompt: "The received verification code",
+            // Optional
+            android: {
+              timeout: 30 // The maximum amount of time you are willing to wait for SMS auto-retrieval to be completed by the library
+            }
+          }
+        })
+        .then(
+          function(result) {
+            JSON.stringify(result);
+          },
+          function(errorMessage) {
+            console.log(errorMessage);
+          }
+        );
     },
     onTapSignup() {
       this.$showModal(SignUp, {
         fullscreen: true,
         animated: true,
-        clearhistory: true,
+        clearhistory: true
       });
       console.log("you click signup");
-    },
-  },
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>
@@ -83,9 +102,9 @@ export default {
     margin-top: 8%;
     font-size: 40;
     font-weight: bold;
-    font-family: 'Rubik','Rubik-Bold';
+    font-family: "Rubik", "Rubik-Bold";
   }
-  .logo{
+  .logo {
     margin-top: 20%;
   }
   TextField {
@@ -108,7 +127,7 @@ export default {
     margin-top: 5;
     // font-weight: bold;
     font-size: 15;
-    font-family: 'Rubik' 'Rubik-Regular';
+    font-family: "Rubik" "Rubik-Regular";
   }
   .flag {
     border-bottom-width: 1;
