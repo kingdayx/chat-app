@@ -101,7 +101,7 @@ export default {
 
 <style scoped lang="scss">
 @import "~/app";
-
+// test
 .page {
   background-color: gray;
 }
